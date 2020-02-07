@@ -5,8 +5,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  private REGISTER_URL = 'http://127.0.0.1:5000/api/register';
-  private LOGIN_URL = 'http://127.0.0.1:5000/api/login';
+  private REGISTER_URL = 'https://pbp-staging-api.herokuapp.com/api/register';
+  private LOGIN_URL = 'https://pbp-staging-api.herokuapp.com/api/login';
 
   constructor(private http: HttpClient) {
   }
