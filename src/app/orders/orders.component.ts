@@ -28,8 +28,8 @@ export class OrdersComponent implements OnInit {
     };
   }
 
-  constructor(private orders: OrdersService,
-              private authservice: AuthService) {
+  constructor(public orders: OrdersService,
+              public authservice: AuthService) {
   }
 
   ngOnInit() {

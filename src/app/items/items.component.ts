@@ -10,8 +10,8 @@ import {AuthService} from '../auth.service';
 export class ItemsComponent implements OnInit {
   ITEMS_LIST = [];
 
-  constructor(private items: ItemService,
-              private authservice: AuthService) {
+  constructor(public items: ItemService,
+              public authservice: AuthService) {
   }
 
   ngOnInit() {

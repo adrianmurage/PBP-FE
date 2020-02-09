@@ -8,8 +8,8 @@ import {TokenrefreshService} from './tokenrefresh.service';
 })
 export class TokenInterceptorService implements HttpInterceptor {
 
-  constructor(private auth: AuthService,
-              private  tokenrefresh: TokenrefreshService) {
+  constructor(public auth: AuthService,
+              public  tokenrefresh: TokenrefreshService) {
   }
 
   intercept(req, next) {
