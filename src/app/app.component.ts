@@ -9,6 +9,6 @@ import {AuthService} from './auth.service';
 export class AppComponent {
   title = 'PBP-FE';
 
-  constructor(private  authservice: AuthService) {
+  constructor(public  authservice: AuthService) {
   }
 }

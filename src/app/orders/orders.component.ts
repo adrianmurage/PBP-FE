@@ -13,10 +13,6 @@ export class OrdersComponent implements OnInit {
   selectedMarker;
   markers = [];
 
-  constructor(private orders: OrdersService,
-              private authservice: AuthService) {
-  }
-
   max(coordType: 'lat' | 'lng'): number {
     return Math.max(...this.markers.map(marker => marker[coordType]));
   }
@@ -30,6 +26,10 @@ export class OrdersComponent implements OnInit {
       lat: event.latitude,
       lng: event.longitude
     };
+  }
+
+  constructor(public orders: OrdersService,
+              public authservice: AuthService) {
   }
 
   ngOnInit() {

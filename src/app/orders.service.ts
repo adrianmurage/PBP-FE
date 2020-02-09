@@ -5,10 +5,10 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class OrdersService {
-  private ORDERS_URL = 'https://pbp-api-v0.herokuapp.com/api/order';
-  private ORDERSMAP_URL = 'https://pbp-api-v0.herokuapp.com/api/order/map';
+  public ORDERS_URL = 'https://pbp-api-v0.herokuapp.com/api/order';
+  public ORDERSMAP_URL = 'https://pbp-api-v0.herokuapp.com/api/order/map';
 
-  constructor(private http: HttpClient) {
+  constructor(public http: HttpClient) {
   }
 
   getOrders() {

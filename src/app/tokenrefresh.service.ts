@@ -6,10 +6,10 @@ import {AuthService} from './auth.service';
   providedIn: 'root'
 })
 export class TokenrefreshService {
-  private TOKENREFRESH_URL = 'https://pbp-api-v0.herokuapp.com/api/token/refresh';
+  public TOKENREFRESH_URL = 'https://pbp-api-v0.herokuapp.com/api/token/refresh';
 
-  constructor(private http: HttpClient,
-              private auth: AuthService) {
+  constructor(public http: HttpClient,
+              public auth: AuthService) {
   }
 
   refreshToken() {
