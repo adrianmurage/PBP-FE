@@ -1,15 +1,17 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import {ProfileComponent} from './profile/profile.component';
 import {OrdersComponent} from './orders/orders.component';
+import {ItemsComponent} from './items/items.component';
+import {AuthGuard} from './auth.guard';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: ProfileComponent,
+    component: ItemsComponent,
     pathMatch: 'full'
   },
   {
@@ -22,11 +24,17 @@ const routes: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'orders',
-    component: OrdersComponent
+    component: OrdersComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'items',
+    component: ItemsComponent
   }
 ];
 
