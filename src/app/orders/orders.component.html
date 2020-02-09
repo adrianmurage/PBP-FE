@@ -1,14 +1,33 @@
+<div class="row pt-5"></div>
+<agm-map
+  [zoom]='2'>
+  <agm-marker
+    (markerClick)='selectMarker($event)'
+    *ngFor='let marker of markers'
+    [latitude]='marker.lat'
+    [longitude]='marker.lng'
+    [markerDraggable]='true'
+    [opacity]='marker.alpha'
+  >
+  </agm-marker>
+  <agm-rectangle
+    [east]='max("lng")'
+    [north]='max("lat")'
+    [south]='min("lat")'
+    [west]='min("lng")'>
+  </agm-rectangle>
+</agm-map>
+<p *ngIf='selectedMarker'>Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}</p>
 <div *ngIf="authservice.loggedIn()" class="row mt-5">
-  <div *ngFor="let _order of ORDERS_LIST" class=" mb-3">
+  <div *ngFor="let _order of ORDERS_LIST" class=" col-md-6 mb-3">
     <div class="card text-center">
       <div class="card-body">
         <h5 class="card-title">Order id: {{_order.order_id}}</h5>
-        <p class="card-text">this was ordered from shop: {{_order.shop_id}}</p>
-        <ul>
-          <li *ngFor="let item of _order.items">
-            Item id:{{item}}
-          </li>
-        </ul>
+        <p class="card-text">this was ordered from shop: {{_order.shop_name}}</p>
+        Items Ordered:
+        <p *ngFor="let item of _order.items">
+          {{item}}
+        </p>
       </div>
     </div>
   </div>

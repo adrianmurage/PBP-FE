@@ -16,6 +16,7 @@ import {AuthGuard} from './auth.guard';
 import {TokenrefreshService} from './tokenrefresh.service';
 import {TokenInterceptorService} from './token-interceptor.service';
 import {OrdersService} from './orders.service';
+import {AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {OrdersService} from './orders.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgmCoreModule.forRoot({apiKey: ''})
   ],
   providers: [
     AuthService,
