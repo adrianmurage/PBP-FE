@@ -17,6 +17,9 @@
     [west]='min("lng")'>
   </agm-rectangle>
 </agm-map>
+<br>
+<br>
+<p>ORDERS:</p>
 <p *ngIf='selectedMarker'>Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}</p>
 <div *ngIf="authservice.loggedIn()" class="row mt-5">
   <div *ngFor="let _order of ORDERS_LIST" class=" col-md-6 mb-3">

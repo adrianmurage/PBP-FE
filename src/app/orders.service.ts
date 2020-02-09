@@ -5,8 +5,8 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class OrdersService {
-  private ORDERS_URL = 'http://127.0.0.1:5000/api/order';
-  private ORDERSMAP_URL = 'http://127.0.0.1:5000/api/order/map';
+  private ORDERS_URL = 'https://pbp-api-v0.herokuapp.com/api/order';
+  private ORDERSMAP_URL = 'https://pbp-api-v0.herokuapp.com/api/order/map';
 
   constructor(private http: HttpClient) {
   }

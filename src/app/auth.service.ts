@@ -6,9 +6,9 @@ import {Router} from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private REGISTER_URL = 'http://127.0.0.1:5000/api/register';
-  private LOGIN_URL = 'http://127.0.0.1:5000/api/login';
-  private USERPROFILE_URL = 'http://127.0.0.1:5000/api/user/profile';
+  private REGISTER_URL = 'https://pbp-api-v0.herokuapp.com/api/register';
+  private LOGIN_URL = 'https://pbp-api-v0.herokuapp.com/api/login';
+  private USERPROFILE_URL = 'https://pbp-api-v0.herokuapp.com/api/user/profile';
 
   constructor(private http: HttpClient,
               private router: Router) {

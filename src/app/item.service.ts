@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ItemService {
-  private ITEMS_URL = 'http://127.0.0.1:5000/api/item';
+  private ITEMS_URL = 'https://pbp-api-v0.herokuapp.com/api/item';
 
   constructor(private http: HttpClient) {
   }
