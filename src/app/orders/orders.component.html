@@ -6,8 +6,7 @@
     *ngFor='let marker of markers'
     [latitude]='marker.lat'
     [longitude]='marker.lng'
-    [markerDraggable]='true'
-    [opacity]='marker.alpha'
+    [markerDraggable]='false'
   >
   </agm-marker>
   <agm-rectangle
