@@ -22,7 +22,9 @@ export class OrdersService {
   }
 
   orderItem(item) {
-    this.http.post<any>(this.ORDERS_URL, item);
-    this.router.navigate(['/orders']);
+    this.http.post<any>(this.ORDERS_URL, item)
+      .subscribe(
+        res => this.router.navigate(['/orders'])
+      );
   }
 }
