@@ -9,18 +9,12 @@
     [markerDraggable]='false'
   >
   </agm-marker>
-  <agm-rectangle
-    [east]='max("lng")'
-    [north]='max("lat")'
-    [south]='min("lat")'
-    [west]='min("lng")'>
-  </agm-rectangle>
 </agm-map>
 <br>
 <br>
-<p>ORDERS:</p>
 <p *ngIf='selectedMarker'>Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}</p>
 <div *ngIf="authservice.loggedIn()" class="row mt-5">
+  <p>ORDERS:</p>
   <div *ngFor="let _order of ORDERS_LIST" class=" col-md-6 mb-3">
     <div class="card text-center">
       <div class="card-body">
