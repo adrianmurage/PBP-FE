@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ export class OrdersService {
   public ORDERS_URL = 'https://pbp-api-v0.herokuapp.com/api/order';
   public ORDERSMAP_URL = 'https://pbp-api-v0.herokuapp.com/api/order/map';
 
-  constructor(public http: HttpClient) {
+  constructor(public http: HttpClient,
+              public router: Router) {
   }
 
   getOrders() {
@@ -25,5 +27,6 @@ export class OrdersService {
         res => console.log(res),
         err => console.log(err)
       );
+    this.router.navigate(['/orders']);
   }
 }
