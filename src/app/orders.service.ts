@@ -20,6 +20,10 @@ export class OrdersService {
   }
 
   orderItem(item) {
-    return this.http.post<any>(this.ORDERS_URL, item);
+    this.http.post<any>(this.ORDERS_URL, item)
+      .subscribe(
+        res => console.log(res),
+        err => console.log(err)
+      );
   }
 }
