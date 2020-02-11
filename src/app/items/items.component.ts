@@ -22,7 +22,6 @@ export class ItemsComponent implements OnInit {
         res => this.ITEMS_LIST = res,
         err => console.log(err)
       );
-    return console.log(this.ITEMS_LIST);
   }
 
 }
