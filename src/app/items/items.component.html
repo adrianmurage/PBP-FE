@@ -4,7 +4,8 @@
       <div class="card-body">
         <h5 class="card-title">{{_item.item_name}}</h5>
         <p class="card-text">this is item {{_item.item_name}}</p>
-        <a *ngIf="authservice.loggedIn()" class="btn btn-primary" href="#">Order Now</a>
+        <a (click)="ordersservice.orderItem({'item_id': _item._id, 'shop_id': _item.shop_id})"
+           *ngIf="authservice.loggedIn()" class="btn btn-primary" href="#">Order Now</a>
       </div>
     </div>
   </div>

@@ -18,4 +18,8 @@ export class OrdersService {
   getOrdersMap() {
     return this.http.get<any>(this.ORDERSMAP_URL);
   }
+
+  orderItem(item) {
+    return this.http.post<any>(this.ORDERS_URL, item);
+  }
 }
